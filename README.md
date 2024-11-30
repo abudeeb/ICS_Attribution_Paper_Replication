@@ -425,7 +425,7 @@ Full replication would take a considerable amount of time or money to either pur
 
 ### Hashing value 
 
-We found difficulties hashing the values of the SAWT dataset. Executing the hashing script would output showed mismatched data. This would mean that our results would not be compared to the paper’s results. It also prevented us from using the processing script. The Git repo had this as a listed issue, but no user had a solution. We considered writing the processing script ourselves and attempting to test even with the mismatched data. However, after carful trouble shooting, we found that saving the files as encoded UTF-8 CSV file produced the issue. Saving the file as a normal non encoded CSV file solved the problem.
+We found difficulties hashing the values of the SAWT dataset. Executing the hashing script would output mismatched hashes. This would mean that our results would not compare to the paper’s results. It also prevented us from using the processing script. The Git repo had this as a listed issue, but no user had a solution. We considered writing the processing script ourselves and attempting to test even with the mismatched data. However, after carful trouble shooting, we found that saving the files as encoded UTF-8 CSV file produced the issue. Saving the file as a normal non encoded CSV file solved the problem.
 
 
 
