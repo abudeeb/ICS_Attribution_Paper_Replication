@@ -422,7 +422,7 @@ The ranking test takes a considerable amount of time and processing power. It to
 We calculated that for us to completely replicate the results and test all ML models (CNN, GRU, LSTM) for all data sets (SWAT, WADI, TEP) for on every attack (WADI-14, SAWT-31, TEP-100+) and against all attribution methods (CF, SM, SG, IG, EG, LIME, SHAP, LEMNA). it would take at least 10 days of 24/7 nonstop processing. So opted to test for only 1 attack using the CNN model for all datasets.
 
 The testing took a total of 7 hours. That incldues training the CNN model and then ranking the features for one attack using the MSE, SM, SHAP, and LEMNA attribution methods on the three dataset.
-Full replication would take a considerable amount of time or money to either purchase a better CPU or rent cloud computing. The paper presents results from a sample of the data that can be used for testing which we choose to follow and compare
+Full replication would take a considerable amount of either time to complete the processing or money to purchase a better hardware or rent cloud computing. The paper presents results from a sample of the data that can be used for testing which we choose to follow and compare
 
 ### Hashing value 
 
