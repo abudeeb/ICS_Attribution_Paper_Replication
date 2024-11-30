@@ -13,7 +13,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-## THIS IS A COPY OF THE ORIGNIAL READ ME FILE - THE CODE IS IDENTICAL AND THE ORGINAL REPO SUPPLIES THE STEPS AND SCRIPTS NEEDED TO SET UP THE ENVIRONEMNT ADDITONAL SECTIONS WERE ADDED AT THE BOTTOM TO SHOW OUR WORK
+## THIS IS A COPY OF THE ORIGNIAL READ ME FILE - The code is identical and the steps needed to replcate the work is already listed, however the folders include the output of the testing the model training. We have removed the data since we do not own it, likes to the data can found. Lastly we added information about our work in addition to screeshots at the end
 
 # Attributions for ML-based ICS Anomaly Detection
 
@@ -369,13 +369,14 @@ The TEP data was supplied by the author through the following  [link](https://ww
 
 We then tested the hashes of the data to make sure we have the correct set and then preformed the labaling for training and testing. Both tasks were completed using the python scripts supplied by the authors 
 
-![Screenshot 2024-11-29 163640](https://github.com/user-attachments/assets/05a45f0a-a639-4cba-8864-a24cad631dd9)
+![Screenshot 2024-11-29 163640](https://github.com/user-attachments/assets/93970864-f3a0-4c24-892b-45d9d7476bab)
+
 
 #### SWAT
 
 We then tested the hashes of the data to make sure we have the correct set and then preformed the labeling for training and testing. Both tasks were completed using the python scripts supplied by the authors 
 
-![Screenshot 2024-11-29 163742](https://github.com/user-attachments/assets/165bbe02-140f-4996-96e9-24ce397f91ff)
+![Screenshot 2024-11-29 163742](https://github.com/user-attachments/assets/c117324c-c156-41d5-9b3b-20876b2365a3)
 
 #### TEP
 
@@ -383,27 +384,30 @@ The TEP dataset as already preprocessed and ready for testing
 
 ### Training the CNN Model on the SWaT dataset
 
-![Screenshot 2024-11-29 144259](https://github.com/user-attachments/assets/e291b512-8492-4797-8398-15b65037be99)
+![Screenshot 2024-11-29 144259](https://github.com/user-attachments/assets/a7adee0e-f560-488e-88ea-fa17a73b8d60)
+
 
 ### Use the CNN Model to make predictions on the test data and save the results
 
-![Screenshot 2024-11-29 144434](https://github.com/user-attachments/assets/047970a4-fe82-451d-a9cf-456d1355514c)
+![Screenshot 2024-11-29 144434](https://github.com/user-attachments/assets/bf0e7d5c-783b-455f-b8d0-db68207c92b7)
+
 
 ### Test the model on the actual dataset and save the results
 
-![Screenshot 2024-11-29 144453](https://github.com/user-attachments/assets/90df0d4f-a2ff-4a55-bebc-6ad06d2da47b)
+![Screenshot 2024-11-29 144453](https://github.com/user-attachments/assets/cdc2c441-c5b7-4af6-b70a-375d20c2dfce)
+
 
 ### Attribution test and ranking
 
 Test the SHAP, SM, and LEMNA attribution methods on the model using different times (300 time stamps per method) This is for attack #1 only
 Afterwards list how each methods ranked the results 
 
-![Screenshot 2024-11-29 151928](https://github.com/user-attachments/assets/14bfd596-77d5-412f-987e-be1e09bdd2a4)
+![Screenshot 2024-11-29 151928](https://github.com/user-attachments/assets/6e923757-549e-4b9a-98b8-6d779cc72352)
 
 
 We followed the same steps for both TEP and WADI datasets 
 
-![Screenshot 2024-11-29 170123](https://github.com/user-attachments/assets/6ae53efe-d719-46ac-9c82-e34eb55af2d5)
+![Screenshot 2024-11-29 170123](https://github.com/user-attachments/assets/42df1c12-d4db-4476-92c0-51096a3d20ab)
 
 
 ## Difficulties and Troubleshooting 
@@ -412,7 +416,7 @@ We followed the same steps for both TEP and WADI datasets
 
 The ranking test takes a considerable amount of time and processing power. It took 2 hours for testing attack 1 from the SWAT dataset against the attribution methods with the CNN model even though all attribution methods testing scripts were running in parallel.
 
-![Screenshot 2024-11-29 145445](https://github.com/user-attachments/assets/1bcaa5c7-f653-4308-b3a4-6b7dd2a572d3)
+![Screenshot 2024-11-29 145445](https://github.com/user-attachments/assets/0f2e4187-f323-41b8-9e1f-366aa926e3ae)
 
 We calculated that for us to completely replicate the results and test all ML models (CNN, GRU, LSTM) for all data sets (SWAT, WADI, TEP) for on every attack (WADI - 14, SAWT - 31, TEP - 100+) and against all attribution methods (CF, SM, SG, IG, EG, LIME, SHAP, LEMNA). it would take at least 10 days of 24/7 nonstop processing. So opted to test for only 1 attack using the CNN model for all datasets.
 
