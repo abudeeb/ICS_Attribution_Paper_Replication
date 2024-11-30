@@ -13,7 +13,8 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 -->
-## THIS IS A COPY OF THE ORIGNIAL READ ME FILE - The code is identical and the steps needed to replcate the work is already listed, however the folders include the output of the attribution ranking and the trained models. We have removed the data since we do not own it, linkes to the data can found in the sections below. Lastly we added information about our work in addition to screeshots at the end
+## THIS IS A MODIFIED VERSION OF THE ORIGNIAL READ ME FILE 
+### The instructions for the setup are identical. We added information about our work in addition to screeshots at the end
 
 # Attributions for ML-based ICS Anomaly Detection
 
