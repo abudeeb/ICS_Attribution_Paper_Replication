@@ -415,13 +415,13 @@ We followed the same steps for both TEP and WADI datasets
 
 ### Processing time 
 
-The ranking test takes a considerable amount of time and processing power. It took 2 hours for testing attack 1 from the SWAT dataset against the attribution methods with the CNN model even though all attribution methods testing scripts were running in parallel.
+The ranking test takes a considerable amount of time and processing power. It took 2 hours for testing attack 1 from the SWAT dataset against the attribution methods with the CNN model.
 
 ![Screenshot 2024-11-29 145445](https://github.com/user-attachments/assets/0f2e4187-f323-41b8-9e1f-366aa926e3ae)
 
-We calculated that for us to completely replicate the results and test all ML models (CNN, GRU, LSTM) for all data sets (SWAT, WADI, TEP) for on every attack (WADI - 14, SAWT - 31, TEP - 100+) and against all attribution methods (CF, SM, SG, IG, EG, LIME, SHAP, LEMNA). it would take at least 10 days of 24/7 nonstop processing. So opted to test for only 1 attack using the CNN model for all datasets.
+We calculated that for us to completely replicate the results and test all ML models (CNN, GRU, LSTM) for all data sets (SWAT, WADI, TEP) for on every attack (WADI-14, SAWT-31, TEP-100+) and against all attribution methods (CF, SM, SG, IG, EG, LIME, SHAP, LEMNA). it would take at least 10 days of 24/7 nonstop processing. So opted to test for only 1 attack using the CNN model for all datasets.
 
-The testing took a total of 6 hours to fully test and collect the results for the CNN model on attack 1 using the MSE, SM, SHAP, and LEMNA attribution methods.
+The testing took a total of 7 hours. That incldues training the CNN model and then ranking the features for one attack using the MSE, SM, SHAP, and LEMNA attribution methods on the three dataset.
 Full replication would take a considerable amount of time or money to either purchase a better CPU or rent cloud computing. The paper presents results from a sample of the data that can be used for testing which we choose to follow and compare
 
 ### Hashing value 
