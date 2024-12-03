@@ -14,7 +14,7 @@
    limitations under the License.
 -->
 ## THIS IS A MODIFIED VERSION OF THE ORIGNIAL READ ME FILE 
-### The instructions for the setup are identical. We added information about our work in addition to screeshots at the end
+### The instructions for the setup are identical. The folders contain the output of our testing. In addition, We added information about our work in addition to screeshots at the end
 
 # Attributions for ML-based ICS Anomaly Detection
 
