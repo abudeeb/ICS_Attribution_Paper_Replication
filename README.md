@@ -51,6 +51,10 @@ This repository contains code for the paper: "Attributions for ML-based ICS anom
 
 ## Core Experiment Workflow
 
+### Diagram
+
+![R3 Workflow Diagram](https://github.com/user-attachments/assets/1366146b-e0c2-4808-94c8-be044f541f21)
+
 ### Requirements
 
 This project uses Python3 and Tensorflow 1, which requires 64-bit Python 3.7 (or lower).
