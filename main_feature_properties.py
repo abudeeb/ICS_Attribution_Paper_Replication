@@ -1,3 +1,9 @@
+
+"""
+This script focuses on analyzing feature properties within a dataset or model. 
+It involve calculating feature importance, properties, or relationships as part of machine learning workflows.
+"""
+
 import networkx as nx
 import numpy as np
 import matplotlib.pyplot as plt
@@ -653,6 +659,11 @@ def parse_arguments():
 
 	return lookup_names, set(parser.parse_args().attack)
 
+
+# Main Execution:
+# - Parses arguments for configuring feature property analysis.
+# - Loads the dataset and identifies features for analysis.
+# - Calls functions to analyze feature properties and generate visualizations.
 if __name__ == "__main__":
 
 	lookup_tupls, attacks = parse_arguments()

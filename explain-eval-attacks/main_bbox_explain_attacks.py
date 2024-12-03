@@ -1,3 +1,9 @@
+
+"""
+This script handles explanations of attacks using machine learning models. It  involve 
+interpreting or explaining black-box attack models and their behavior in the context of anomaly detection.
+"""
+
 """
 
    Copyright 2023 Lujo Bauer, Clement Fung
@@ -152,6 +158,12 @@ def parse_arguments():
 
 	return parser.parse_args()
 
+
+# Main Execution:
+# - Parses arguments to configure the explanation process.
+# - Loads attack data for explanation generation.
+# - Calls the function to explain attacks using the specified model.
+# - Evaluates the generated explanations using metrics or visualization tools.
 if __name__ == "__main__":
 
 	import os

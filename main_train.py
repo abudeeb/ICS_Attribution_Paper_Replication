@@ -1,3 +1,9 @@
+
+"""
+This script is part of the ICS anomaly attribution repository. It is used to train machine learning models
+for detecting and attributing anomalies in industrial control systems datasets.
+"""
+
 """
 
    Copyright 2023 Lujo Bauer, Clement Fung
@@ -50,6 +56,14 @@ from detector import lstm, cnn, gru
 from data_loader import load_train_data, load_test_data
 from utils import utils
 
+
+# Function: train_forecast_model
+# Purpose: Train a specified ML model type (GRU, LSTM, CNN) using the provided datasets.
+# Parameters:
+# - model_type: The type of model to be trained.
+# - config: Configuration dictionary with training and model parameters.
+# - Xtrain, Xval: Training and validation input data.
+# - Ytrain, Yval: Training and validation labels.
 def train_forecast_model(model_type, config, Xtrain, Xval, Ytrain, Yval):
 
     train_params = config['train']
@@ -76,6 +90,14 @@ def train_forecast_model(model_type, config, Xtrain, Xval, Ytrain, Yval):
 
     return event_detector
 
+
+# Function: train_forecast_model_by_idxs
+# Purpose: Train a model using index-based subsets of the dataset for training and validation.
+# Parameters:
+# - model_type: The type of model to be trained. (CNN, LTSM, GRU)
+# - config: Configuration dictionary with training and model parameters.
+# - Xfull: Full dataset from which indices will be used.
+# - train_idxs, val_idxs: Indices for training and validation subsets.
 def train_forecast_model_by_idxs(model_type, config, Xfull, train_idxs, val_idxs):
 
     train_params = config['train']
@@ -102,6 +124,13 @@ def train_forecast_model_by_idxs(model_type, config, Xfull, train_idxs, val_idxs
 
     return event_detector
 
+
+# Function: save_model
+# Purpose: Save the trained model to disk for future use.
+# Parameters:
+# - event_detector: The trained model to be saved.
+# - config: Configuration dictionary containing the model name.
+# - run_name: The directory name under which the model will be saved (default: 'results').
 def save_model(event_detector, config, run_name='results'):
     model_name = config['name']
     try:
@@ -111,7 +140,13 @@ def save_model(event_detector, config, run_name='results'):
         print(f"Directory models/{run_name}/ not found, model {model_name} saved at models/results/ instead")
         print(f"Note: we recommend creating models/{run_name}/ to store this model")
 
-# functions
+
+# Function: load_saved_model
+# Purpose: Load a previously saved model along with its parameters.
+# Parameters:
+# - model_type: The type of model to load (GRU, LSTM, CNN).
+# - params_filename: Path to the JSON file containing model parameters.
+# - model_filename: Path to the saved model file.
 def load_saved_model(model_type, params_filename, model_filename):
     """ Load stored model. """
 
@@ -134,6 +169,10 @@ def load_saved_model(model_type, params_filename, model_filename):
 
     return event_detector
 
+
+# Function: parse_arguments
+# Purpose: Parse command-line arguments for configuring the script.
+# Returns: Parsed arguments with details like training parameters, model type, and dataset name.
 def parse_arguments():
 
     parser = utils.get_argparser()
@@ -153,6 +192,13 @@ def parse_arguments():
 
     return parser.parse_args()
 
+
+# Main Execution:
+# - Parses arguments for model training configuration.
+# - Sets up training parameters and environment variables.
+# - Loads datasets for training and testing.
+# - Splits data into training and validation subsets using indices.
+# - Trains the model and saves it to disk.
 if __name__ == "__main__":
 
     args = parse_arguments()
