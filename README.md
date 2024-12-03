@@ -416,6 +416,9 @@ We followed the same steps for both TEP and WADI datasets
 
 
 ## Final results compared to paper
+
+### Reproduction
+
 | Method | Best Guess Rnak | Best Practical Rank | Best Guess Timing rank | Best Practical Timing Rank |
 | --- | --- | --- | --- | --- |
 | MSE | 1 | 4 | 15.96 | 15.52 |
@@ -423,6 +426,16 @@ We followed the same steps for both TEP and WADI datasets
 | SHAP | 9 | 13 | 15.04 | 16.08 |
 | LEMNA | 7 | 9 | 12.77 | 13.79 |
 | Ensamble | N/A | N/A | 2.85 | 1.88 |
+
+### Paper
+
+| Method | Best Guess Rnak | Best Practical Rank | Best Guess Timing rank | Best Practical Timing Rank |
+| --- | --- | --- | --- | --- |
+| MSE | 1 | 3 | 11.59 | 13.98 |
+| SM | 4 | 15 | 2.23 | 1.31 |
+| SHAP | 10 | 15 | 16.03 | 16.43 |
+| LEMNA | 7 | 9 | 12.84 | 13.79 |
+| Ensamble | N/A | N/A | 3.74 | 2.81 |
 
 ## Difficulties and Troubleshooting 
 
